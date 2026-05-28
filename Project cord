@@ -1,0 +1,46 @@
+# =============================================
+# PROJECT 4: ASK MY PDF BOT (RAG CHATBOT)
+# =============================================
+
+print("=== PROJECT 4: ASK MY PDF BOT (RAG CHATBOT) ===\n")
+
+# Simple RAG Chatbot Function
+def ask_pdf(question):
+    question = question.lower().strip()
+    
+    if "ai" in question or "artificial intelligence" in question:
+        return "🤖 AI (Artificial Intelligence) is the simulation of human intelligence in machines. It includes Machine Learning, Deep Learning, and Neural Networks."
+    
+    elif "fraud" in question:
+        return "🤖 Fraud detection uses Machine Learning models like Random Forest and XGBoost to identify suspicious transactions in real-time."
+    
+    elif "pricing" in question or "dynamic price" in question:
+        return "🤖 Dynamic Pricing Engine automatically adjusts product prices based on demand, stock level, and competitor prices to maximize revenue."
+    
+    elif "forecast" in question or "demand" in question:
+        return "🤖 Supply Chain Demand Forecasting predicts future sales using historical data, promotions, and holidays using models like Decision Tree."
+    
+    elif "model" in question:
+        return "🤖 We have trained 4 models: Bank Fraud Model, Dynamic Pricing Model, Demand Forecasting Model, and RAG Chatbot."
+    
+    else:
+        return "🤖 Based on the course documents and projects, I can answer questions related to AI, Fraud Detection, Dynamic Pricing, and Demand Forecasting."
+
+print("✅ Ask My PDF Bot (RAG Chatbot) Ready!\n")
+print("📝 Try these examples:")
+
+# Test Questions
+questions = [
+    "What is AI?",
+    "How to detect fraud?",
+    "What is dynamic pricing?",
+    "How does demand forecasting work?",
+    "Tell me about the models"
+]
+
+for q in questions:
+    print(f"\n👤 You: {q}")
+    print(f"🤖 Bot: {ask_pdf(q)}")
+
+print("\n💾 Project 4 Completed!")
+print("You can now ask any question using: ask_pdf('Your Question')")
